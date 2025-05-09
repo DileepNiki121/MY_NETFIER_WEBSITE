@@ -205,6 +205,10 @@ button:hover {
   width: 100%;
   max-width: 100%;
 }
+.count{
+  background-color: red;
+  color: white;
+}
 
 .main-header h1 {
   font-family: 'Orbitron', sans-serif;

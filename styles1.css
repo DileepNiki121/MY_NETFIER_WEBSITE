@@ -240,12 +240,13 @@ button:hover {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 20px auto;
+  margin: 30px 20px 10px 30px;
+  margin: right 440px;
 }
 
 .info-box {
-  background: #c56fc1;
-  color: rgb(13, 13, 13);
+  background: #dce19e;
+  color: rgb(13, 13, 14);
   border-radius: 15px;
   padding: 0%;
   width: 300px;
@@ -261,6 +262,7 @@ button:hover {
 .info-box i {
   font-size: 20px;
   margin-bottom: 5px;
+  margin-top:10px;
 }
 
 .info-box p {
@@ -295,6 +297,12 @@ a {
   object-fit: cover;
   border: 3px solid #0a96a8;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+
+}
+
+.card{
+  padding: 0%;
+  margin: 10px;
 }
 
 /* ==================== MOBILE RESPONSIVENESS ==================== */

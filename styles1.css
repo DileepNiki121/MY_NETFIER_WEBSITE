@@ -381,8 +381,10 @@ a {
 
 /* Base style for each colorful option/link */
 .colorful-option {
+  background-color: white;
     display: flex;
     align-items: center;
+    
     text-decoration: none; /* Remove underline from links */
     color: #333; /* Default text color */
     border-radius: 10px;
@@ -430,7 +432,7 @@ a {
 .content-box {
     flex-grow: 1;
     padding: 15px 2px 15px 30px; /* Left padding is important to move away from the angled edge */
-    background-color: #ecece7; /* White background for the main content area */
+    background-color: white; /* White background for the main content area */
     position: relative;
     z-index: 1;
 }

@@ -309,7 +309,7 @@ a {
 @media (max-width: 1500px) {
   body {
     height: auto;
-    padding: 10px;
+    padding: 5px;
   }
 
   .container {
@@ -505,4 +505,31 @@ a {
 }
 
 /* You would need to make sure you have Font Awesome loaded for the icons (fas fa-briefcase, etc.) to show up. */
+/* Container for the new colorful options */
+.colorful-row {
+    /* Existing Styles */
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+    padding: 20px;
+    
+    /* UPDATED: Set a wider maximum width for desktop view */
+    max-width: 600px; /* Use a medium-large width that still looks good */
+    /* UPDATED: Center the container on the page */
+    margin: 20px auto; 
+}
 
+@media (max-width: 400px) {
+    .colorful-row {
+        padding: 10px; /* Reduce overall padding */
+    }
+    .content-box {
+        padding: 15px 15px 15px 30px; /* Slightly reduce content padding */
+    }
+    .content-box h3 {
+        font-size: 1.2em; /* Shrink title font */
+    }
+    .content-box p {
+        font-size: 0.85em; /* Shrink paragraph font */
+    }
+}

@@ -306,7 +306,7 @@ a {
 }
 
 /* ==================== MOBILE RESPONSIVENESS ==================== */
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
   body {
     height: auto;
     padding: 10px;
@@ -505,3 +505,4 @@ a {
 }
 
 /* You would need to make sure you have Font Awesome loaded for the icons (fas fa-briefcase, etc.) to show up. */
+

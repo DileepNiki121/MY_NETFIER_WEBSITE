@@ -268,7 +268,8 @@ a {
   object-fit: cover;
   border: 3px solid #0a96a8;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
-  margin-top: -80px;
+  margin-top: -65px;
+  margin-bottom: -15px;
 
 }
 
@@ -627,7 +628,35 @@ a {
     background-color: #df1f0d;
 }
 
+.more-info-btn {
  
+    background-color: #d56d1c; 
+    padding: 5px 10px; 
+    color: #ffffff; /* White text and icon color */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+     gap: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    transition: background-color 0.3s ease;
+}
+ .profile-brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f0f0f0; /* Assuming white text color on your blue header */
+    transition: opacity 0.3s;
+}
+.profile-brand-link i {
+    font-size: 14px; 
+    color: #fafafa; 
+    font-style: normal;  
+    font-weight: bold;
+    padding-right: 5px;  
+}
 
 
  
@@ -706,7 +735,7 @@ a {
   
     /* End point: Returns to the card's normal state */
     100% { 
-        background-color: #2b2525; 
+        background-color: #d31616; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         border-color: transparent;
     }
@@ -724,4 +753,9 @@ a {
     /* Ensure border and transition properties are set on the card class itself */
     /* If your .colorful-option class doesn't have a transition already, add this: */
     /* transition: all 0.3s ease; */
+}
+
+/* Class to open the menu */
+#mobile-menu-items.is-open {
+    transform: translateX(0);
 }

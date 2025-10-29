@@ -10,20 +10,9 @@ signInButton.addEventListener('click', () => {
   container.classList.remove("right-panel-active");
 });
 
-//=========================================
-
-//  const count = "0"; // replace this with a dynamic number later
-//   const visitorcontainer = document.getElementById("visitor-counter");
-
-//   [...count].forEach(digit => {
-//     const img = document.createElement("img");
-//     img.src = `digits/${digit}.png`; // points to digit image
-//     img.style.height = "40px";       // adjust size
-//     container.appendChild(img);
-//   });
-
  
-    // This function will run every time the "More Info" button is clicked
+ 
+   // This function will run every time the "More Info" button is clicked
     function toggleMobileMenu() {
         // 1. Get the element that holds the hidden links (Home, About, Search, etc.)
         const menuItems = document.getElementById('mobile-menu-items');
@@ -49,6 +38,14 @@ signInButton.addEventListener('click', () => {
             // Check if the target element exists on the page
             if (targetElement) {
                 
+                // --- 💥 NEW CODE ADDED HERE: Auto-Close Menu ---
+                const menuItems = document.getElementById('mobile-menu-items');
+                if (menuItems && menuItems.classList.contains('active')) {
+                    // Remove the 'active' class to close the menu automatically
+                    menuItems.classList.remove('active');
+                }
+                // ------------------------------------------------
+                
                 // 2. Smoothly scroll to the target section
                 targetElement.scrollIntoView({ 
                     behavior: 'smooth', 
@@ -58,11 +55,10 @@ signInButton.addEventListener('click', () => {
                 // 3. Add the highlight class immediately
                 targetElement.classList.add('highlight-flash');
 
-                // 4. Remove the highlight class after 2000 milliseconds (2 seconds)
-                // This duration MUST match the '2s' in your CSS animation.
+                // 4. Remove the highlight class after 5000 milliseconds (5 seconds)
                 setTimeout(() => {
                     targetElement.classList.remove('highlight-flash');
-                }, 5000); 
+                }, 4000); 
             }
         });
     });

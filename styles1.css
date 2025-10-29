@@ -111,20 +111,7 @@ button:hover {
   transition: transform 0.6s ease-in-out;
   z-index: 100;
 }
-
-.overlay {
-  background: linear-gradient(to right, #35d288, #adad48);
-  color: rgb(206, 24, 24);
-  position: relative;
-  left: -100%;
-  height: 100%;
-  width: 200%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+ 
 
 .container.right-panel-active .overlay-container {
   transform: translateX(-100%);
@@ -134,26 +121,7 @@ button:hover {
   transform: translateX(50%);
 }
 
-.overlay-panel {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 40px;
-  height: 100%;
-  width: 50%;
-}
-
-.overlay-left {
-  transform: translateX(-40%);
-}
-
-.overlay-right {
-  right: 0;
-  transform: translateX(0);
-}
+ 
 
 /* Social Icons */
 .social-icons {
@@ -204,6 +172,9 @@ button:hover {
   margin: 20px auto;
   width: 100%;
   max-width: 100%;
+  padding-top: 0px;
+  margin-top: 0%;
+  margin-bottom: 2px;
 }
 .count{
   background-color: rgb(0, 21, 255);
@@ -297,6 +268,7 @@ a {
   object-fit: cover;
   border: 3px solid #0a96a8;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  margin-top: -80px;
 
 }
 
@@ -393,6 +365,7 @@ a {
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     padding-right: 20px; /* Space for the right-side curve */
+    margin-top: -20px;
 }
 
 /* Hover effect for interaction */
@@ -532,4 +505,223 @@ a {
     .content-box p {
         font-size: 0.85em; /* Shrink paragraph font */
     }
+}
+ /* --- Profile Navigation Bar (The Blue Bar) --- */
+.profile-navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    height: 50%;
+    margin-top: -2%;
+    
+    /* Blue Background from the example image */
+    background-color: #337ab7; /* A deep blue color */
+    padding: 1px 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 1px;
+}
+
+/* --- Left Side: Profile Brand Link --- */
+.profile-brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* Styles for the "Navbar" text/profile area */
+    color: white; 
+    font-size: 1.5em; 
+    font-weight: bold;
+}
+
+.profile-nav-photo-left {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    /* Your desired border color and glow */
+    border: 3px solid #ff4500; 
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.6);
+    
+    margin-right: 10px;
+}
+
+.profile-nav-text {
+    color: white;
+    font-size: 1em; /* Keep text slightly smaller than the profile photo name */
+}
+
+/* --- Right Side: Links, Search, and More --- */
+.nav-right-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+/* --- Navigation Links (Home, About, etc.) --- */
+.nav-links {
+     border-radius: 4px;
+    background-color: #cab9b9;
+    display: flex;
+    align-items: center;
+    gap: 0; /* Removing gap here as links are tight in the example */
+}
+
+.nav-link-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 15px; /* Padding for the link boxes */
+    transition: background-color 0.3s;
+
+}
+
+/* Style for the "Home" link to look like a button */
+.nav-links a:first-child {
+    background-color: #31cf09; /* Darker blue for the 'active' Home button */
+    border-radius: 4px;
+}
+
+.nav-links a {
+    background-color: #c61132; /* Darker blue for the 'active' Home button */
+    border-radius: 20px;
+}
+.nav-link-item:hover {
+    background-color: #c9c1af; 
+}
+
+.nav-link-item i {
+    margin-right: 5px;
+}
+
+/* --- Search Bar Styling (Matching the example) --- */
+.nav-search-container {
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-input {
+    border: none;
+    padding: 8px 10px;
+    outline: none;
+    width: 200px; /* Adjust search box width */
+    font-size: 1em;
+    height: 5%;
+}
+
+.search-btn {
+    border: none;
+    background-color:#181717; /* Darker blue button */
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    margin: 5px;
+    height: 5%;
+    
+ 
+}
+
+.search-btn:hover {
+    background-color: #df1f0d;
+}
+
+ 
+
+
+ 
+/* ============================================== */
+/* === RESPONSIVE STYLES (For Mobile Devices) === */
+/* ============================================== */
+@media (max-width: 768px) {
+    /* ... (Your existing A, C, D, E styles are fine) ... */
+
+    /* B. HIDE on Mobile by Default / Show on Click */
+    
+    /* 1. Ensure the Nav Right Content is positioned relatively for the dropdown */
+    .nav-right-content {
+        position: relative; 
+    }
+
+    /* 2. Style the Dropdown Menu (Hidden by default) */
+    #mobile-menu-items {
+        display: none; /* Hides the menu content */
+        
+        /* Positioning the dropdown to the right corner */
+        position: absolute; 
+        top: 45px; /* Adjust this to sit right below the top bar */
+        right: 0; /* Aligns the dropdown to the right edge */
+        
+        width: 300px; /* **Gives it a fixed width for the "side buttons" look** */
+        
+        z-index: 1000; 
+        background-color: #337ab7; /* Blue color for the dropdown */
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 3. SHOW THE MENU WHEN THE .active CLASS IS ADDED */
+    #mobile-menu-items.active {
+        display: block; /* Shows the dropdown */
+    }
+
+    /* 4. Ensure the links stack vertically */
+    .nav-links {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 10px;
+        background-color: #5d6d54;
+    }
+
+    /* 5. Make each link look like a full-width button in the dropdown */
+    .nav-link-item {
+        width: 100%;
+        padding: 10px 15px;
+        margin-bottom: 5px;
+        text-align: left;
+        background-color: #2bbbb6; /* Darker blue button look */
+        border-radius: 4px;
+    }
+    
+    /* 6. Style the search bar in the dropdown */
+    .nav-search-container {
+       color: #b62890; /* Light gray for subtle look */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    margin: 5px;
+    background: #000;
+    }
+}
+ 
+/* *****hailagating aftoer presing the navagtion butoun********* */
+
+/* --- THE LIGHT HIGHLIGHT ANIMATION & EFFECT --- */
+
+/* 1. Define the Animation: The flash sequence */
+@keyframes light-flash {
+  
+    /* End point: Returns to the card's normal state */
+    100% { 
+        background-color: #2b2525; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        border-color: transparent;
+    }
+}
+
+/* 2. The Trigger Class: Applied via JavaScript */
+.highlight-flash {
+    /* Apply the animation for 2 seconds (must match the JS setTimeout duration) */
+    animation: light-flash 2s ease-in-out forwards; 
+    
+    /* Ensure the highlight works smoothly without disrupting layout */
+    position: relative; 
+    z-index: 10;
+    
+    /* Ensure border and transition properties are set on the card class itself */
+    /* If your .colorful-option class doesn't have a transition already, add this: */
+    /* transition: all 0.3s ease; */
 }

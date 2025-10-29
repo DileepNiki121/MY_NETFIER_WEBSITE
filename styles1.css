@@ -759,3 +759,54 @@ a {
 #mobile-menu-items.is-open {
     transform: translateX(0);
 }
+
+/* --- Floating Social Channels Container --- */
+.social-channels-floating {
+    position: fixed; /* Keeps them visible regardless of scroll */
+    
+    
+    top:160px; 
+    
+    right:337px; /* Aligns them to the right edge */
+    
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 6px; /* Space between icons */
+    z-index: 999; /* Ensures they appear above your content */
+}
+
+/* --- Individual Social Icon Styling --- */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Size of the circular button */
+    height: 50px;
+  
+    border: 7px solid #ffffff; /* 3px thick, solid white border */
+    border-radius: 50%;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icon i {
+    color: #ffffff; /* White icon */
+    font-size: 24px; /* Size of the Font Awesome icon */
+}
+
+/* Hover Effect */
+.social-icon:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Specific Colors for WhatsApp and Telegram --- */
+.telegram-icon {
+    background-color: #0088cc; /* Telegram blue */
+}
+
+.whatsapp-icon {
+    background-color: #25d366; /* WhatsApp green */
+}

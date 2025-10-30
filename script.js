@@ -63,3 +63,27 @@ signInButton.addEventListener('click', () => {
         });
     });
 });
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // This makes the scroll smooth
+    });
+}
+
+// Function to show/hide the button based on scroll position
+function scrollFunction() {
+    const mybutton = document.getElementById("scrollToTopBtn");
+    // Show the button when scrolling down 300px (or any distance you choose)
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        mybutton.classList.add('show');
+    } else {
+        mybutton.classList.remove('show');
+    }
+}
+
+// Add the scroll event listener to the window
+window.onscroll = function() {
+    scrollFunction();
+};
+ 

@@ -520,7 +520,7 @@ a {
     background-color: #337ab7; /* A deep blue color */
     padding: 1px 2px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    gap: 1px;
+    gap: 6px;
 }
 
 /* --- Left Side: Profile Brand Link --- */
@@ -529,9 +529,10 @@ a {
     align-items: center;
     text-decoration: none;
     /* Styles for the "Navbar" text/profile area */
-    color: white; 
-    font-size: 1.5em; 
+    color: rgb(50, 39, 39); 
+    font-size: 1.1em; 
     font-weight: bold;
+     
 }
 
 .profile-nav-photo-left {
@@ -543,8 +544,9 @@ a {
     /* Your desired border color and glow */
     border: 3px solid #ff4500; 
     box-shadow: 0 0 8px rgba(255, 69, 0, 0.6);
-    
-    margin-right: 10px;
+     margin-left: 3px;
+
+ 
 }
 
 .profile-nav-text {
@@ -569,7 +571,7 @@ a {
 }
 
 .nav-link-item {
-    color: white;
+    color: rgb(13, 13, 13);
     text-decoration: none;
     font-size: 1em;
     padding: 8px 15px; /* Padding for the link boxes */
@@ -584,11 +586,11 @@ a {
 }
 
 .nav-links a {
-    background-color: #c61132; /* Darker blue for the 'active' Home button */
+    background-color: #830699; /* Darker blue for the 'active' Home button */
     border-radius: 20px;
 }
 .nav-link-item:hover {
-    background-color: #c9c1af; 
+    background-color: #acc4e7; 
 }
 
 .nav-link-item i {
@@ -615,11 +617,12 @@ a {
     border: none;
     background-color:#181717; /* Darker blue button */
     color: white;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     width: 100px;
     margin: 5px;
     height: 5%;
+    margin-left: -0px;
     
  
 }
@@ -809,4 +812,20 @@ a {
 
 .whatsapp-icon {
     background-color: #25d366; /* WhatsApp green */
+}
+
+.scroll-to-top-btn{
+    border: none;
+  padding: 10px 10px 10px 7px;
+  margin-top: 1px;
+  margin-left: 1px;
+  background-color: #e019dd;
+  color: rgb(247, 247, 247);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 50px;
+
 }

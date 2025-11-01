@@ -768,8 +768,7 @@ a {
     position: fixed; /* Keeps them visible regardless of scroll */
     
     
-    top:160px; 
-    
+    bottom: 160px;
     right:337px; /* Aligns them to the right edge */
     
     display: flex;
@@ -829,3 +828,4 @@ a {
   max-width: 50px;
 
 }
+

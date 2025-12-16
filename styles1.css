@@ -829,4 +829,45 @@ a {
 
 }
 
+/* ===== SMALL ALL LINKS BUTTONS NEAR LOGO (NO LAYOUT CHANGE) ===== */
+
+.logo-all-links-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 0; /* IMPORTANT: does not affect layout */
+}
+
+.all-links-side {
+  position: absolute;
+  top: 0px; /* aligns vertically with logo */
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.all-links-side.left {
+  left: 10px;
+}
+
+.all-links-side.right {
+  right: 10px;
+}
+
+.all-links-side:hover {
+  transform: scale(1.1);
+}
+
+
+
+
 
